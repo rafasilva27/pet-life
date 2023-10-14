@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+:root {
+  --azul: #00517b;
+  --azul-escuro: #0a3e59;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0; /* removendo a margem padrão do navegador */
+}
+
+body {
+  color: #263138;
+}
+
+header {
+  background-color: var(--azul);
+  display: flex;
+  align-items: center; /* vertical */
+  justify-content: space-between; /* horizontal */
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+header nav a {
+  color: #ffffff;
+  font-weight: 600;
+  padding: 32px;
+  text-decoration: none;
+}
+
+#inicio {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 24px 80px 128px 80px; /* top, right, bottom, left */
+  position: relative;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.paragrafo {
+  line-height: 150%;
+  margin-bottom: 32px;
+}
+
+.botao {
+  background-color: var(--azul);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 16px 32px; /* vertical e horizontal */
+  border-radius: 8px;
+}
+
+.botao:hover {
+  background-color: var(--azul-escuro);
+}
+
+.botao-transparente {
+  background-color: transparent;
+  color: var(--azul);
+  padding: 16px 32px;
+  text-underline-offset: 4px;
+  border: 1px solid var(--azul);
+  border-radius: 8px;
+}
+
+.absoluto {
+  position: absolute; /* posição absoluta em relação ao elemento pai */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -10; /* é a posição de profundidade do elemento */
+}
+
+#clinica {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 64px 80px;
+}
+
+#clinica li {
+  margin-bottom: 16px;
+  margin-left: 16px;
+}
+
+#farmacia {
+  padding: 64px 80px;
+  text-align: center;
+}
+
+#farmacia img {
+  margin: 34px auto;
+}
+
+#farmacia .paragrafo {
+  max-width: 950px;
+  margin: 0 auto; /* horizontalmente automático */
+}
+
+#duvidas {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 64px 80px;
+}
+
+.duvida {
+  position: relative;
+}
+
+.duvida h3 {
+  border: 2px solid var(--azul);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 24px;
+}
+
+.duvida img {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+}
+
+.duvida .paragrafo {
+  border-right: 1px solid var(--azul);
+  border-bottom: 1px solid var(--azul);
+  border-left: 1px solid var(--azul);
+  border-radius: 0 0 8px 8px;
+  margin-top: -8px;
+  padding: 0 24px;
+  height: 0;
+  opacity: 0;
+  overflow: hidden; /* esconde o conteúdo, pra não transbordar */
+  transition: 0.2s;
+}
+
+.duvida.ativa .paragrafo {
+  height: fit-content;
+  opacity: 1;
+  padding: 24px;
+}
+
+footer {
+  background-color: #00527b2d;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 64px 80px;
+}
+
+footer img,
+footer .titulo {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+footer nav a {
+  color: #263138;
+  display: block; /* vai ficar em coluna, é o oposto do flex que fica em linha vertical */
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+
+footer p {
+  margin-bottom: 12px;
+  max-width: 350px;
+}
+
+footer p a {
+  color: var(--azul);
+  text-decoration: none;
+}
+
+#copywright {
+  background-color: #263138;
+  padding: 16px;
+  text-align: center;
+  color: #ffffff;
+}
